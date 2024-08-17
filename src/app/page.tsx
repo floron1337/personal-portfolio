@@ -1,113 +1,212 @@
+import ContactForm from "@/components/ContactForm";
+import ScrollButton from "@/components/ScrollButton";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import { Toaster } from "@/components/ui/toaster";
+import { scrollIntoTheView } from "@/lib/utils";
+import { ArrowBigRightDash, BriefcaseBusiness, CodeXml, FolderGit2, GraduationCap, Layers, Lock, Mail, Paperclip, Pencil, Send, SquareArrowOutUpLeft, User } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center">
+      <section className='w-full h-[90vh] max-md:h-screen' id="hero-section">
+        <div className='absolute w-full h-[90vh] max-md:h-screen hero-gradient flex flex-row items-center justify-center gap-4'>
+          <div className='flex flex-col'>
+            <h2 className='text-dark-blue text-2xl font-semibold max-md:text-lg'>The Personal Portfolio of</h2>
+            <h1 className='text-white text-6xl font-bold max-md:text-5xl'>FLORIN VENIȘ</h1>
+
+            <div className='typewriter text-3xl max-md:text-xl text-white bg-dark-blue font-medium w-[25rem] max-md:w-[16.5rem]'>
+              <h1 className=''><span className='text-cyan-400'>web_developer</span><span className='text-orange-300'>.init()</span></h1>
+            </div>
+
+            <div className='flex flex-row mt-4 gap-4'>
+            <ScrollButton scrollId="projects-section" className='primary-btn'>
+              <FolderGit2 /> Projects 
+            </ScrollButton>
+
+            <ScrollButton scrollId="contact-section" className='secondary-btn'>
+              <Send/> Work with me
+            </ScrollButton>
+            </div>
+          </div>
         </div>
-      </div>
+        <Image src='/img/home-bg.jpg' alt="home background" width={1920} height={900} className='h-full object-cover'/>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="w-full bg-[url('/img/about-bg.png')] bg-cover pb-16 flex flex-col items-center border-t-8" id='about-section'>
+        <div className='flex flex-row items-center justify-center gap-4 mx-32 text-white mt-4 max-md:mx-4 translate-x-8 max-md:translate-x-0'>
+          <div className='w-12 h-12 bg-white'></div>
+          <h1 className='text-3xl font-semibold max-md:text-xl'>Work & Study Experience</h1>
+        </div>
+        <div className='flex flex-row mt-4 text-white justify-center translate-x-8 max-md:translate-x-0 max-md:gap-4'>
+            <h1 className='text-sm -rotate-90 translate-x-12 max-md:hidden'>Florin Veniș</h1>
+            <Image src="/img/avatar.png" alt="Picture of Florin Venis" width={160} height={160} className='-translate-x-6 max-md:-translate-x-0'/>
+            <div className='flex flex-col justify-center'>
+              <h2>Living in Romania</h2>
+              <h2>Born in 2004</h2>
+              <h2>Over 6 years of experience</h2>
+            </div>
+        </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className='h-[0.1px] bg-white w-1/2 mt-8 translate-x-8 max-md:translate-x-0'>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className='flex flex-col mx-32 items-center max-md:mx-4 translate-x-8 max-md:translate-x-0'>
+        <div className='flex flex-col text-white'>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          <div className='flex flex-col'>
+            <div className='flex flex-row gap-4 items-center mt-8'>
+              <BriefcaseBusiness className='size-10'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Work Experience</h1>
+            </div>
+            <h1 className='text-xl mt-4 font-medium'>Lead Trainer at Logiscool Medgidia</h1>
+            <h3 className='text-xs'>January 2022 - July 2024</h3>
+            <p className='mt-2'>
+              IT Instructor, teaching children aged 9-18. Helped with internal organization and local community events.
+            </p>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div className='flex flex-col'>
+            <div className='flex flex-row gap-4 items-center mt-8'>
+              <Layers className='size-10'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Tech Stack</h1>
+            </div>
+            <div className='flex flex-row gap-8 mt-4 flex-wrap'>
+              <Image src='/img/stack/git.svg' alt="git icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/css3.svg' alt="css3 icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/html5.svg' alt="html5 icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/javascript.svg' alt="javascript icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/nextdotjs.svg' alt="nextjs icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/tailwindcss.svg' alt="tailwind icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/react.svg' alt="react icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/django.svg' alt="django icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+              <Image src='/img/stack/python.svg' alt="python icon" width={60} height={60} className='invert hover:scale-125 ease'/>
+            </div>
+          </div>
+
+          <div className='flex flex-col'>
+            <div className='flex flex-row gap-4 items-center mt-8'>
+              <GraduationCap className='size-12'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Studies & Distinctions</h1>
+            </div>
+            <h1 className='text-xl mt-4 font-medium'>Bachelor's in Informatics - University of Bucharest</h1>
+            <h3 className='text-xs'>October 2024 - Ongoing</h3>
+
+            <h1 className='text-xl mt-4 font-medium'>Math & Computer Science - "Nicolae Balcescu" High School Medgidia</h1>
+            <h3 className='text-xs'>September 2020 - June 2024</h3>
+
+            <h1 className='text-xl mt-4 font-medium'>GENIUS Olympiad NY, USA - Bronze Medal</h1>
+            <h3 className='text-xs'>June 2024</h3>
+
+            <h1 className='text-xl mt-4 font-medium'>National Olympiad of Applied Informatics - Polytechnic University of Bucharest</h1>
+            <h3 className='text-xs'>May 2024</h3>
+          </div>
+
+          <div className='mt-16 flex flex-col items-center'>
+            <h1 className='text-4xl font-medium'>Made up your mind?</h1>
+            <h2>Schedule a private meeting for free!</h2>
+
+            <div className='flex flex-row gap-4 mt-4'>
+              <Dialog>
+                <DialogTrigger className='primary-light-btn max-md:text-base'>
+                  <Paperclip/> Curriculum Vitae
+                </DialogTrigger>
+                <DialogContent className='min-w-[75vw] h-full'>        
+                  <iframe src="https://drive.google.com/file/d/1fUz14WBXOoUc-787G7U0V6l2riI5mxwZ/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
+                </DialogContent>
+              </Dialog>
+              <ScrollButton scrollId='contact-section' className='secondary-btn max-md:text-base'>
+                <Send/> Work with me
+              </ScrollButton>
+            </div>
+          </div> 
+          </div>
+        </div>   
+      </section>
+
+      <section className='w-full' id='projects-section'>
+        <div className='flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-8 border-t-8'>
+          <CodeXml className="size-24"/>
+          <div>
+            <h1 className='text-4xl font-bold'>Take a look at some of my projects</h1>
+            <h2>Built with love, over the years</h2>
+          </div>
+        </div>
+
+        <div className="min-h-[75vh] bg-[url('/img/projects/novaks.jpg')] bg-cover flex items-center ">
+          <div className='ml-48 text-[#01446F] bg-white p-8 w-1/2 max-md:w-2/3 rounded-2xl border-4 max-md:ml-4'>
+            <h2 className='font-medium'>E-Commerce</h2>
+            <h1 className='text-5xl font-bold'>Novak's Seaside Diner</h1>
+            <h3 className='text-xs'>July 2024</h3>
+            <p className='mt-4'>
+              A beautiful custom made e-commerce website, equipped with secure payment services and management systems.
+            </p>
+            <div className="flex mt-4">
+              <Link href="https://novaks-diner.vercel.app/" target="_blank" className='bg-[#01446F] text-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl hover:gap-4 ease items-center justify-center'>
+                <SquareArrowOutUpLeft/>
+                Check it out
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="min-h-[75vh] bg-[url('/img/projects/algovs.png')] bg-cover flex items-center ">
+          <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
+            <h2 className='font-medium'>Web Application</h2>
+            <h1 className='text-5xl font-bold'>AlgoVS</h1>
+            <h3 className='text-xs'>March 2024 - present</h3>
+            <p className='mt-4'>
+              A 3D Web Application where you can build stunning animations and algorithm visualizations.
+            </p>
+            <div className="flex mt-4">
+              <Link href="https://algo-vs.vercel.app/" target="_blank" className='bg-white text-black flex flex-row gap-2 py-[8px] px-[24px] rounded-xl hover:gap-4 ease items-center justify-center'>
+                <SquareArrowOutUpLeft />
+                Check it out
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.png')] bg-cover flex items-center ">
+          <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
+            <h2 className='font-medium'>Web Application</h2>
+            <h1 className='text-5xl font-bold'>VIChess</h1>
+            <h3 className='text-xs'>May 2023 - July 2023</h3>
+            <p className='mt-4'>
+              The power of A.I. move prediction and image recognition unleashed in the noble game of Chess. 
+            </p>
+            <div className="flex mt-4">
+              <div className='bg-gray-300 text-black flex flex-row gap-2 py-[8px] px-[24px] rounded-xl items-center justify-center cursor-default'>
+                <Lock />
+                Coming soon
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-[url('/img/contact-bg.jpg')] bg-cover border-t-8 pb-16" id='contact-section'>
+        <div className='mx-32 mt-8 flex flex-col items-center translate-x-8 max-md:mx-4 max-md:translate-x-0'>
+          <div className='flex flex-row items-center justify-center gap-4 text-white mt-4'>
+            <div className='w-12 h-12 bg-white'></div>
+            <div className='flex flex-col'>
+              <h1 className='text-3xl font-semibold'>Contact Me</h1>
+              <h3>Get started today with building your dream.</h3>
+            </div>
+          </div>
+
+          <ContactForm/>
+
+        </div>
+      </section>
+      <Toaster/>
     </main>
   );
 }
