@@ -154,7 +154,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="min-h-[75vh] bg-[url('/img/projects/algovs.png')] bg-cover flex items-center ">
+        <div className="min-h-[75vh] bg-[url('/img/projects/algovs.PNG')] bg-cover flex items-center ">
           <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
             <h2 className='font-medium'>Web Application</h2>
             <h1 className='text-5xl font-bold'>AlgoVS</h1>
