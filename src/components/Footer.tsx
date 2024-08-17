@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='mx-32 py-4 flex flex-col items-center max-md:mx-4'>
                 <div className='flex flex-row items-center justify-center gap-4'>
                     <Image src='/img/logo.png' alt="logo" width={40} height={40}/>
-                    <h1 className='text-2xl font-semibold max-md:text-lg'>The Personal Portfolio of Florin Veniș</h1>
+                    <h1 className='text-2xl font-semibold max-md:text-lg max-md:text-center'>The Personal Portfolio of Florin Veniș</h1>
                 </div>
                 <h3>All rights reverved.</h3>
                 <div className='h-[0.1px] w-[36rem] max-md:w-[24rem] bg-white my-4'></div>

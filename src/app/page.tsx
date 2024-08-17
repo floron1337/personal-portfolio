@@ -44,9 +44,9 @@ export default function Home() {
           <div className='w-12 h-12 bg-white'></div>
           <h1 className='text-3xl font-semibold max-md:text-xl'>Work & Study Experience</h1>
         </div>
-        <div className='flex flex-row mt-4 text-white justify-center translate-x-8 max-md:translate-x-0 max-md:gap-4'>
+        <div className='flex flex-row mt-4 text-white justify-center translate-x-8 max-md:translate-x-0 max-md:gap-12'>
             <h1 className='text-sm -rotate-90 translate-x-12 max-md:hidden'>Florin Veniș</h1>
-            <Image src="/img/avatar.png" alt="Picture of Florin Venis" width={160} height={160} className='-translate-x-6 max-md:-translate-x-0'/>
+            <Image src="/img/avatar.png" alt="Picture of Florin Venis" width={160} height={160} className='-translate-x-6 max-md:translate-x-8'/>
             <div className='flex flex-col justify-center'>
               <h2>Living in Romania</h2>
               <h2>Born in 2004</h2>
@@ -111,14 +111,14 @@ export default function Home() {
 
             <div className='flex flex-row gap-4 mt-4'>
               <Dialog>
-                <DialogTrigger className='primary-light-btn max-md:text-base'>
+                <DialogTrigger className='primary-light-btn max-md:text-xs'>
                   <Paperclip/> Curriculum Vitae
                 </DialogTrigger>
                 <DialogContent className='min-w-[75vw] h-full'>        
                   <iframe src="https://drive.google.com/file/d/1fUz14WBXOoUc-787G7U0V6l2riI5mxwZ/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
                 </DialogContent>
               </Dialog>
-              <ScrollButton scrollId='contact-section' className='secondary-btn max-md:text-base'>
+              <ScrollButton scrollId='contact-section' className='secondary-btn max-md:text-xs'>
                 <Send/> Work with me
               </ScrollButton>
             </div>
@@ -193,8 +193,8 @@ export default function Home() {
           <div className='flex flex-row items-center justify-center gap-4 text-white mt-4'>
             <div className='w-12 h-12 bg-white'></div>
             <div className='flex flex-col'>
-              <h1 className='text-3xl font-semibold'>Contact Me</h1>
-              <h3>Get started today with building your dream.</h3>
+              <h1 className='text-3xl font-semibold max-md:text-lg'>Contact Me</h1>
+              <h3 className='max-md:text-xs'>Get started today with building your dream.</h3>
             </div>
           </div>
 
