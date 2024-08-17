@@ -1,10 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import ScrollButton from "@/components/ScrollButton";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Toaster } from "@/components/ui/toaster";
-import { scrollIntoTheView } from "@/lib/utils";
-import { ArrowBigRightDash, BriefcaseBusiness, CodeXml, FolderGit2, GraduationCap, Layers, Lock, Mail, Paperclip, Pencil, Send, SquareArrowOutUpLeft, User } from "lucide-react";
+import { BriefcaseBusiness, CodeXml, FolderGit2, GraduationCap, Layers, Lock, Paperclip, Send, SquareArrowOutUpLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
