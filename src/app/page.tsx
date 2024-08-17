@@ -18,7 +18,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <section className='w-full h-[90vh] max-md:h-screen' id="hero-section">
         <div className='absolute w-full h-[90vh] max-md:h-screen hero-gradient flex flex-row items-center justify-center gap-4'>
-          <div className='flex flex-col'>
+          <div className='flex flex-col max-md:mx-32'>
             <h2 className='text-dark-blue text-2xl font-semibold max-md:text-lg'>The Personal Portfolio of</h2>
             <h1 className='text-white text-6xl font-bold max-md:text-5xl'>FLORIN VENIȘ</h1>
 
@@ -26,14 +26,13 @@ export default function Home() {
               <h1 className=''><span className='text-cyan-400'>web_developer</span><span className='text-orange-300'>.init()</span></h1>
             </div>
 
-            <div className='flex flex-row mt-4 gap-4'>
-            <ScrollButton scrollId="projects-section" className='primary-btn'>
-              <FolderGit2 /> Projects 
-            </ScrollButton>
-
-            <ScrollButton scrollId="contact-section" className='secondary-btn'>
-              <Send/> Work with me
-            </ScrollButton>
+            <div className='flex flex-row mt-4 gap-4 max-md:flex-col max-md:items-center'>
+              <ScrollButton scrollId="projects-section" className='primary-btn max-md:text-base max-md:w-full max-md:justify-center'>
+                <FolderGit2 /> Projects 
+              </ScrollButton>
+              <ScrollButton scrollId="contact-section" className='secondary-btn max-md:text-base max-md:w-full max-md:justify-center'>
+                <Send/> Work with me
+              </ScrollButton>
             </div>
           </div>
         </div>
@@ -107,7 +106,7 @@ export default function Home() {
           </div>
 
           <div className='mt-16 flex flex-col items-center'>
-            <h1 className='text-4xl font-medium'>Made up your mind?</h1>
+            <h1 className='text-4xl font-medium max-md:text-xl'>Made up your mind?</h1>
             <h2>Schedule a private meeting for free!</h2>
 
             <div className='flex flex-row gap-4 mt-4'>

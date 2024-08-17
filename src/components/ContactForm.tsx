@@ -50,7 +50,7 @@ export default function ContactForm(){
   
     return(
       <>
-        <form className='flex flex-col w-1/2 mt-8 border-4 p-8 bg-white max-xl:w-full' onSubmit={handleSubmit} method="POST" ref={formRef}>
+        <form className='flex flex-col w-1/2 mt-8 border-4 p-8 bg-white max-xl:w-full text-black' onSubmit={handleSubmit} method="POST" ref={formRef}>
           <label className='flex flex-row items-center gap-1'><User className='size-6'/> Name</label>
           <input required type="text" name="name" placeholder="Enter your name" className='border-black border h-8 mb-4 mt-1 px-2'/>
           <label className='flex flex-row items-center gap-1'><Mail className='size-6'/> Email</label>
@@ -59,7 +59,7 @@ export default function ContactForm(){
           <textarea required name="message" placeholder="Enter a short description of your project" className='border-black border h-60 mb-4 mt-1 px-2'/>
           <div className='flex flex-row gap-2'>
             <input required type="checkbox"/>
-            <p>I confirm sending this message.</p>
+            <p className='max-md:text-sm'>I confirm sending this message.</p>
           </div>
           <div className='mt-4'>
             <button type='submit' className='primary-light-btn hover:bg-dark-blue hover:text-white' disabled={loading}>
@@ -67,7 +67,7 @@ export default function ContactForm(){
                     <>
                         <div className="inline-block h-6 w-6 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" role="status">
                             <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                                Loading...
+                                
                             </span>
                         </div>  
                         Loading 
