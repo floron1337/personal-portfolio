@@ -107,7 +107,7 @@ export default function Home() {
 
           <div className='mt-16 flex flex-col items-center'>
             <h1 className='text-4xl font-medium max-md:text-xl'>Made up your mind?</h1>
-            <h2>Schedule a private meeting for free!</h2>
+            <h2 className='max-md:text-sm text-center'>Schedule a private meeting for free!</h2>
 
             <div className='flex flex-row gap-4 mt-4'>
               <Dialog>
