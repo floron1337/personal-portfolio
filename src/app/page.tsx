@@ -96,10 +96,10 @@ export default function Home() {
             <div className='flex flex-row gap-4 items-center mt-8'>
               <GraduationCap className='size-12'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Studies & Distinctions</h1>
             </div>
-            <h1 className='text-xl mt-4 font-medium'>Bachelor's in Informatics - University of Bucharest</h1>
+            <h1 className='text-xl mt-4 font-medium'>Bachelor&apos;s in Informatics - University of Bucharest</h1>
             <h3 className='text-xs'>October 2024 - Ongoing</h3>
 
-            <h1 className='text-xl mt-4 font-medium'>Math & Computer Science - "Nicolae Balcescu" High School Medgidia</h1>
+            <h1 className='text-xl mt-4 font-medium'>Math & Computer Science - &quot;Nicolae Balcescu&quot; High School Medgidia</h1>
             <h3 className='text-xs'>September 2020 - June 2024</h3>
 
             <h1 className='text-xl mt-4 font-medium'>GENIUS Olympiad NY, USA - Bronze Medal</h1>
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="min-h-[75vh] bg-[url('/img/projects/novaks.jpg')] bg-cover flex items-center ">
           <div className='ml-48 text-[#01446F] bg-white p-8 w-1/2 max-md:w-2/3 rounded-2xl border-4 max-md:ml-4'>
             <h2 className='font-medium'>E-Commerce</h2>
-            <h1 className='text-5xl font-bold'>Novak's Seaside Diner</h1>
+            <h1 className='text-5xl font-bold'>Novak&apos;s Seaside Diner</h1>
             <h3 className='text-xs'>July 2024</h3>
             <p className='mt-4'>
               A beautiful custom made e-commerce website, equipped with secure payment services and management systems.
