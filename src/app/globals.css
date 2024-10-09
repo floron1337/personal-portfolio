@@ -156,3 +156,27 @@ body {
 .drop-shadow{
   filter: drop-shadow(2px 0px 1.25px #000000);
 }
+
+.vichess-bg-gradient{
+  background: radial-gradient(#202020, #000000);
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000011;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(200, 200, 200);
+}

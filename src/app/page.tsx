@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Image src='/img/home-bg.jpg' alt="home background" width={1920} height={900} className='h-full object-cover'/>
+        <div className="w-full h-[90vh] max-md:h-screen bg-[url('/img/home-bg.jpg')] bg-cover"></div>
       </section>
 
       <section className="w-full bg-[url('/img/about-bg.png')] bg-cover pb-16 flex flex-col items-center border-t-8" id='about-section'>
@@ -153,6 +153,23 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.jpg')] bg-cover flex items-center ">
+          <div className='ml-48 text-white vichess-bg-gradient p-8 w-1/2 rounded-2xl border-4 border-black max-md:w-2/3 max-md:ml-4'>
+            <h2 className='font-medium'>Web Application</h2>
+            <h1 className='text-5xl font-bold'>VIChess</h1>
+            <h3 className='text-xs'>May 2023 - July 2023</h3>
+            <p className='mt-4'>
+              The power of A.I. move prediction and image recognition unleashed in the noble game of Chess. 
+            </p>
+            <div className="flex mt-4">
+              <Link href="https://vichess.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white hover:gap-4 flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                <SquareArrowOutUpLeft/>
+                Check it out
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className="min-h-[75vh] bg-[url('/img/projects/algovs.PNG')] bg-cover flex items-center ">
           <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
             <h2 className='font-medium'>Web Application</h2>
@@ -166,23 +183,6 @@ export default function Home() {
                 <SquareArrowOutUpLeft />
                 Check it out
               </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.png')] bg-cover flex items-center ">
-          <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
-            <h2 className='font-medium'>Web Application</h2>
-            <h1 className='text-5xl font-bold'>VIChess</h1>
-            <h3 className='text-xs'>May 2023 - July 2023</h3>
-            <p className='mt-4'>
-              The power of A.I. move prediction and image recognition unleashed in the noble game of Chess. 
-            </p>
-            <div className="flex mt-4">
-              <div className='bg-gray-300 text-black flex flex-row gap-2 py-[8px] px-[24px] rounded-xl items-center justify-center cursor-default'>
-                <Lock />
-                Coming soon
-              </div>
             </div>
           </div>
         </div>
