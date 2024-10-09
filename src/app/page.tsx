@@ -153,7 +153,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.jpg')] bg-cover flex items-center ">
+        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.JPG')] bg-cover flex items-center ">
           <div className='ml-48 text-white vichess-bg-gradient p-8 w-1/2 rounded-2xl border-4 border-black max-md:w-2/3 max-md:ml-4'>
             <h2 className='font-medium'>Web Application</h2>
             <h1 className='text-5xl font-bold'>VIChess</h1>
