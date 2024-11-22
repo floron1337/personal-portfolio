@@ -1,3 +1,10 @@
+<h1>My Personal Portfolio</h1>
+<a href="https://www.florinvenis.com" target="_blank">
+  www.florinvenis.com
+</a>
+
+![Personal Portfolio Image](https://i.imgur.com/mzaz971.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
