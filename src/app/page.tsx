@@ -27,9 +27,9 @@ export default function Home() {
             </div>
 
             <div className='flex flex-row mt-4 gap-4 max-md:flex-col max-md:items-center'>
-              <ScrollButton scrollId="projects-section" className='primary-btn max-md:text-base max-md:w-full max-md:justify-center'>
-                <FolderGit2 /> Projects 
-              </ScrollButton>
+              <Link href="https://github.com/floron1337" target="_blank" className='primary-btn max-md:text-base max-md:w-full max-md:justify-center'>
+                <FolderGit2 /> GitHub Projects 
+              </Link>
               <ScrollButton scrollId="contact-section" className='secondary-btn max-md:text-base max-md:w-full max-md:justify-center'>
                 <Send/> Work with me
               </ScrollButton>
