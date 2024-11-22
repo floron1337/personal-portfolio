@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets:["latin", "latin-ext"]})
 
 export const metadata: Metadata = {
   title: "Florin Venis | Personal Portfolio",
-  description: "My name is Florin Venis, I'm a 19 year old, IT Instructor, Freelance Developer from Romania. With over 6 years of programming experience and numerous finished projects, I enjoy building software using the latest technologies.",
+  description: "My name is Florin Venis, I'm a 20 year old, IT Instructor, Freelance Developer from Romania. With over 6 years of programming experience and numerous finished projects, I enjoy building software using the latest technologies.",
 };
 
 export default function RootLayout({
