@@ -115,7 +115,7 @@ export default function Home() {
                   <Paperclip/> Curriculum Vitae
                 </DialogTrigger>
                 <DialogContent className='min-w-[75vw] h-full'>        
-                  <iframe src="https://drive.google.com/file/d/1Z-Kre-nH8kND6_zGDbIGKOzdTGzhUfd-/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
+                  <iframe src="https://drive.google.com/file/d/1wO1rjBrvOJItRh75vD8CYFcYBwLeYUkU/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
                 </DialogContent>
               </Dialog>
               <ScrollButton scrollId='contact-section' className='secondary-btn max-md:text-xs'>
