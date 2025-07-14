@@ -58,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className='w-full' id='projects-section'>
-        <div className='h-[10vh] border-t border-b flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-12'>
+        <div className='h-[10vh] border-t border-b flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-12 px-8'>
           <CodeXml className="size-24 max-lg:size-12" />
           <div>
             <h1 className='text-4xl font-bold max-lg:text-2xl max-md:text-lg'>Take a look at some of my projects</h1>
