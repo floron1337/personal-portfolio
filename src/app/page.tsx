@@ -12,12 +12,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import SuspenseImage from "@/components/SuspenseImage";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <section className='w-full h-[90vh]' id="hero-section">
-        <div className='absolute w-full h-[90vh] hero-gradient flex flex-col items-center justify-center gap-4'>
+        <div className='absolute w-full h-[90vh] z-30 hero-gradient flex flex-col items-center justify-center gap-4'>
           <div className='flex flex-col max-md:mx-32'>
             <h2 className='text-dark-blue text-2xl font-semibold max-md:text-lg'>The Personal Portfolio of</h2>
             <h1 className='text-white text-6xl font-bold max-lg:text-5xl max-md:text-4xl'>FLORIN VENIȘ</h1>
@@ -53,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-full h-[90vh] max-md:h-screen bg-[url('/img/home-bg.jpg')] bg-cover"></div>
+        <SuspenseImage priority src="/img/home-bg.jpg" width={1920} height={1080} alt="hero background" className="w-full z-0 h-[90vh] max-md:h-screen bg-[url('/img/home-bg.jpg')] bg-cover" />
       </section>
 
       <section className='w-full' id='projects-section'>
@@ -118,7 +119,7 @@ export default function Home() {
                   Project GitHub
                 </Link>
               </div>
-              <Image className="mt-8 border" src="/img/projects/memory.jpg" alt="screenshot of allocated space for files" width={1920} height={1080} />
+              <SuspenseImage className="mt-8 border" src="/img/projects/memory.jpg" alt="screenshot of allocated space for files" width={1920} height={1080} />
             </div>
             <div className="w-1/2 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] max-md:ml-0 max-md:px-8">
               <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
@@ -142,7 +143,7 @@ export default function Home() {
                   Project GitHub
                 </Link>
               </div>
-              <Image className="mt-8 border" src="/img/projects/grouping.png" alt="screenshot of allocated space for files" width={1920} height={1080} />
+              <SuspenseImage className="mt-8 border" src="/img/projects/grouping.png" alt="screenshot of allocated space for files" width={1920} height={1080} />
             </div>
           </div>
         </div>
@@ -174,7 +175,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-1/2 max-xl:w-full">
-              <Image src="/img/projects/worldshapers.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
+              <SuspenseImage src="/img/projects/worldshapers.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
             </div>
           </div>
           <div className="ml-[5vw] max-md:ml-0 px-8 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] border-b py-8 flex gap-16 max-xl:gap-8 items-center justify-center max-xl:flex-col">
@@ -204,7 +205,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-1/2 max-xl:w-full">
-              <Image src="/img/projects/novaks.jpg" alt="photo of the project Novaks Diner" width={1280} height={640} />
+              <SuspenseImage src="/img/projects/novaks.jpg" alt="photo of the project Novaks Diner" width={1280} height={640} />
             </div>
           </div>
 
@@ -230,7 +231,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-1/2 max-xl:w-full">
-              <Image src="/img/projects/weather.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
+              <SuspenseImage src="/img/projects/weather.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
             </div>
           </div>
         </div>
