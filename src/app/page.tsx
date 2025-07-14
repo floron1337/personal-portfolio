@@ -58,16 +58,16 @@ export default function Home() {
       </section>
 
       <section className='w-full' id='projects-section'>
-        <div className='h-[10vh] border-t border-b flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-8'>
+        <div className='h-[10vh] border-t border-b flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-12'>
           <CodeXml className="size-24 max-lg:size-12" />
           <div>
-            <h1 className='text-4xl font-bold max-lg:text-2xl max-md:text-xl'>Take a look at some of my projects</h1>
-            <h2>Built with love, over the years</h2>
+            <h1 className='text-4xl font-bold max-lg:text-2xl max-md:text-lg'>Take a look at some of my projects</h1>
+            <h2 className="max-md:text-sm">Built with love, over the years</h2>
           </div>
         </div>
 
         <div className="min-h-[75vh] bg-center bg-[url('/img/projects/vichess2.jpg')] bg-cover flex justify-center items-center border-black">
-          <div className='vichess-bg-gradient max-lg:ml-[5vw] max-md:m-8 text-white p-8 rounded-2xl border'>
+          <div className='vichess-bg-gradient max-lg:ml-[5vw] max-md:ml-0 max-md:px-8 text-white p-8 rounded-2xl border'>
             <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
               <p>Machine Learning</p>
               <p>Image Recognition</p>
