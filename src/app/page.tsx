@@ -54,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <SuspenseImage priority src="/img/home-bg.jpg" width={1920} height={1080} alt="hero background" className="w-full z-0 h-[90vh] max-md:h-screen bg-[url('/img/home-bg.jpg')] bg-cover" />
+        <SuspenseImage priority src="/img/home-bg.jpg" width={1920} height={972} alt="hero background" className="w-full object-cover z-0 h-[90vh]" />
       </section>
 
       <section className='w-full' id='projects-section'>
@@ -84,13 +84,13 @@ export default function Home() {
             <p className='mt-4'>
               The power of A.I. move prediction and image recognition unleashed in the noble game of Chess.
             </p>
-            <div className="flex mt-4 gap-4 max-md:text-sm">
-              <Link href="https://vichess.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                <SquareArrowOutUpLeft />
+            <div className="flex mt-4 gap-4">
+              <Link href="https://vichess.vercel.app/" target="_blank" className='border text-white max-md:text-xs hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                <SquareArrowOutUpLeft className="max-md:size-4" />
                 Check it out
               </Link>
-              <Link href="https://github.com/floron1337/VIChess" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                <FolderGit2 />
+              <Link href="https://github.com/floron1337/VIChess" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                <FolderGit2 className="max-md:size-4" />
                 Project GitHub
               </Link>
             </div>
@@ -114,8 +114,8 @@ export default function Home() {
                 The raw power of Assembly used for a system to allocate and de-allocate memory for files, plus complexe functions like defragmentation and concrete.
               </p>
               <div className="flex mt-4 gap-4">
-                <Link href="https://github.com/floron1337/memory-asc" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <FolderGit2 />
+                <Link href="https://github.com/floron1337/memory-asc" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 className="max-md:size-4" />
                   Project GitHub
                 </Link>
               </div>
@@ -138,8 +138,8 @@ export default function Home() {
                 Built during a challenge to scrape all the logos from a list of domains and group them based on similarity.
               </p>
               <div className="flex mt-4 gap-4">
-                <Link href="https://github.com/floron1337/logo-cluster" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <FolderGit2 />
+                <Link href="https://github.com/floron1337/logo-cluster" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 className="max-md:size-4" />
                   Project GitHub
                 </Link>
               </div>
@@ -168,8 +168,8 @@ export default function Home() {
                 A very early demo is available on GitHub.
               </p>
               <div className="flex mt-4 gap-4">
-                <Link href="https://github.com/floron1337/worldshapers-gambit" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <FolderGit2 />
+                <Link href="https://github.com/floron1337/worldshapers-gambit" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 className="max-md:size-4" />
                   Project GitHub
                 </Link>
               </div>
@@ -194,12 +194,12 @@ export default function Home() {
                 A beautiful custom made e-commerce website, equipped with secure payment services and management systems.
               </p>
               <div className="flex mt-4 gap-4">
-                <Link href="https://novaks-diner.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <SquareArrowOutUpLeft />
+                <Link href="https://novaks-diner.vercel.app/" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <SquareArrowOutUpLeft className="max-md:size-4" />
                   Check it out
                 </Link>
-                <Link href="https://github.com/floron1337/novaks-diner" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <FolderGit2 />
+                <Link href="https://github.com/floron1337/novaks-diner" target="_blank" className='border max-md:text-xs text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 className="max-md:size-4" />
                   Project GitHub
                 </Link>
               </div>
@@ -224,8 +224,8 @@ export default function Home() {
                 A weather app build using Rust and Open Weather API. Built during a hackathon.
               </p>
               <div className="flex mt-4 gap-4">
-                <Link href="https://github.com/floron1337/rusty-weather" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                  <FolderGit2 />
+                <Link href="https://github.com/floron1337/rusty-weather" target="_blank" className='max-md:text-xs border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 className="max-md:size-4" />
                   Project GitHub
                 </Link>
               </div>
