@@ -47,10 +47,10 @@ export default function Home() {
 
           <div className="absolute top-[80vh] h-[10vh] w-full flex items-center justify-center gap-8">
             <Link href="https://www.linkedin.com/in/florin-veni%C8%99-5169b3332/" target="_blank">
-              <Image src='/img/social/linkedin.png' alt="python icon" width={123} height={30} className='hover:scale-105 ease' />
+              <SuspenseImage src='/img/social/linkedin.png' alt="python icon" width={103} height={25} className='hover:scale-105 ease' />
             </Link>
             <Link href="https://github.com/floron1337" target="_blank">
-              <Image src='/img/social/github.png' alt="python icon" width={104} height={30} className='hover:scale-105 ease' />
+              <SuspenseImage src='/img/social/github.png' alt="python icon" width={87} height={25} className='hover:scale-105 ease' />
             </Link>
           </div>
         </div>
