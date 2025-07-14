@@ -46,10 +46,10 @@ export default function Home() {
 
           <div className="absolute top-[80vh] h-[10vh] w-full flex items-center justify-center gap-8">
             <Link href="https://www.linkedin.com/in/florin-veni%C8%99-5169b3332/" target="_blank">
-              <Image src='/img/social/linkedin.png' alt="python icon" width={100} height={100} className='hover:scale-105 ease' />
+              <Image src='/img/social/linkedin.png' alt="python icon" width={123} height={30} className='hover:scale-105 ease' />
             </Link>
             <Link href="https://github.com/floron1337" target="_blank">
-              <Image src='/img/social/github.png' alt="python icon" width={100} height={100} className='hover:scale-105 ease' />
+              <Image src='/img/social/github.png' alt="python icon" width={104} height={30} className='hover:scale-105 ease' />
             </Link>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Home() {
                   Project GitHub
                 </Link>
               </div>
-              <Image className="mt-8 border" src="/img/projects/memory.jpg" alt="screenshot of allocated space for files" width={1910} height={1036} />
+              <Image className="mt-8 border" src="/img/projects/memory.jpg" alt="screenshot of allocated space for files" width={1920} height={1080} />
             </div>
             <div className="w-1/2 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] max-md:ml-0 max-md:px-8">
               <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
@@ -142,7 +142,7 @@ export default function Home() {
                   Project GitHub
                 </Link>
               </div>
-              <Image className="mt-8 border" src="/img/projects/grouping.png" alt="screenshot of allocated space for files" width={1920} height={9999} />
+              <Image className="mt-8 border" src="/img/projects/grouping.png" alt="screenshot of allocated space for files" width={1920} height={1080} />
             </div>
           </div>
         </div>

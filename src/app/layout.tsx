@@ -4,8 +4,6 @@ import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
-import { Suspense } from "react";
-import Loading from "./feed/loading";
 
 const montserrat = Montserrat({ subsets: ["latin", "latin-ext"] })
 
@@ -23,9 +21,7 @@ export default function RootLayout({
     <html lang="en" className='scroll-smooth'>
       <body className={montserrat.className}>
         <Sidebar />
-        <Suspense fallback={<Loading />}>
-          {children}
-        </Suspense>
+        {children}
         <Footer />
       </body>
     </html>
