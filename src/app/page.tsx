@@ -68,7 +68,7 @@ export default function Home() {
 
         <div className="min-h-[75vh] bg-center bg-[url('/img/projects/vichess2.jpg')] bg-cover flex justify-center items-center border-black">
           <div className='vichess-bg-gradient max-lg:ml-[5vw] max-md:m-8 text-white p-8 rounded-2xl border'>
-            <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base max-lg:[&>p]:text-xs">
+            <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
               <p>Machine Learning</p>
               <p>Image Recognition</p>
               <p>NEXTjs</p>
