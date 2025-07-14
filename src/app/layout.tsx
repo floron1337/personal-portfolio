@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Lusitana } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
-const montserrat = Montserrat({ subsets:["latin", "latin-ext"]})
+const montserrat = Montserrat({ subsets: ["latin", "latin-ext"] })
 
 export const metadata: Metadata = {
   title: "Florin Venis | Personal Portfolio",
@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className='scroll-smooth'>
       <body className={montserrat.className}>
-        <Sidebar/>
+        <Sidebar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

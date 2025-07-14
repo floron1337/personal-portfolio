@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -32,132 +29,150 @@ body {
   }
 }
 
-.ease{
+.ease {
   transition: 0.4s ease;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.hero-gradient{
+.hero-gradient {
   background: linear-gradient(-45deg, #ee765299, #e73c7e52, #23a5d594, #23d5ab3b);
-	background-size: 400% 400%;
-	animation: gradient 16s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 16s ease infinite;
 }
 
-.contact-gradient{
+.contact-gradient {
   background: linear-gradient(-45deg, rgba(0, 0, 0, 0.332) 0%, rgba(0, 162, 255, 0.419) 100%);
   background-size: 400% 400%;
-	animation: gradient 16s ease infinite;
+  animation: gradient 16s ease infinite;
 }
 
 .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
     typing 3s steps(32, end),
     blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(253 186 116); }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: rgb(253 186 116);
+  }
 }
 
-.primary-btn{
+.primary-btn {
   background-color: #000035;
-  color:white;
+  color: white;
   padding: 8px 24px;
   font-size: 1.25rem;
   border-radius: 1rem;
-  display:flex;
-  gap:4px;
+  display: flex;
+  gap: 4px;
   align-items: center;
-  transition:0.4s ease;
+  transition: 0.4s ease;
 }
 
-.primary-btn:hover{
-  background-color:white;
-  color:black;
+.primary-btn:hover {
+  background-color: white;
+  color: black;
 }
 
-.primary-btn-hoverdark{
+.primary-btn-hoverdark {
   background-color: #000035;
-  color:white;
+  color: white;
   padding: 8px 24px;
   font-size: 1.25rem;
   border-radius: 1rem;
-  display:flex;
-  gap:4px;
+  display: flex;
+  gap: 4px;
   align-items: center;
-  transition:0.4s ease;
+  transition: 0.4s ease;
 }
 
-.primary-btn-hoverdark:hover{
-  background-color:black;
-  gap:12px;
-  color:white;
+.primary-btn-hoverdark:hover {
+  background-color: black;
+  gap: 12px;
+  color: white;
 }
 
-.secondary-btn{
+.secondary-btn {
   background-color: rgb(253 186 116);
   color: black;
   padding: 8px 24px;
   font-size: 1.25rem;
   border-radius: 1rem;
-  display:flex;
-  gap:4px;
+  display: flex;
+  gap: 4px;
   align-items: center;
-  transition:0.4s ease;
+  transition: 0.4s ease;
 }
 
-.secondary-btn:hover{
-  gap: 12px;
-  background-color:white;
-  color:black;
+.secondary-btn:hover {
+  background-color: white;
+  color: black;
 }
 
-.primary-light-btn{
+.primary-light-btn {
   background-color: #00A3FF;
-  color:white;
+  color: white;
   padding: 8px 24px;
   font-size: 1.25rem;
   border-radius: 1rem;
-  display:flex;
-  gap:4px;
+  display: flex;
+  gap: 4px;
   align-items: center;
-  transition:0.4s ease;
+  transition: 0.4s ease;
 }
 
-.primary-light-btn:hover{
-  background-color:white;
-  color:black;
+.primary-light-btn:hover {
+  background-color: white;
+  color: black;
 }
 
-.drop-shadow{
+.drop-shadow {
   filter: drop-shadow(2px 0px 1.25px #000000);
 }
 
-.vichess-bg-gradient{
+.vichess-bg-gradient {
   background: radial-gradient(#202020, #000000);
 }
 

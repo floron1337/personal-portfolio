@@ -16,179 +16,227 @@ import {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <section className='w-full h-[90vh] max-md:h-screen' id="hero-section">
-        <div className='absolute w-full h-[90vh] max-md:h-screen hero-gradient flex flex-row items-center justify-center gap-4'>
+      <section className='w-full h-[90vh]' id="hero-section">
+        <div className='absolute w-full h-[90vh] hero-gradient flex flex-col items-center justify-center gap-4'>
           <div className='flex flex-col max-md:mx-32'>
             <h2 className='text-dark-blue text-2xl font-semibold max-md:text-lg'>The Personal Portfolio of</h2>
-            <h1 className='text-white text-6xl font-bold max-md:text-5xl'>FLORIN VENIȘ</h1>
+            <h1 className='text-white text-6xl font-bold max-lg:text-5xl max-md:text-4xl'>FLORIN VENIȘ</h1>
 
-            <div className='typewriter text-3xl max-md:text-xl text-white bg-dark-blue font-medium w-[25rem] max-md:w-[16.5rem]'>
-              <h1 className=''><span className='text-cyan-400'>web_developer</span><span className='text-orange-300'>.init()</span></h1>
+            <div className='typewriter text-3xl max-md:text-xl text-white bg-dark-blue font-medium w-[31rem] max-md:w-[20.5rem]'>
+              <h1 className=''><span className='text-cyan-400'>software_developer</span><span className='text-orange-300'>.init()</span></h1>
             </div>
 
-            <div className='flex flex-row mt-4 gap-4 max-md:flex-col max-md:items-center'>
+            <div className='w-full justify-between flex flex-row mt-4 gap-4 max-md:flex-col max-md:items-center'>
               <Link href="https://github.com/floron1337" target="_blank" className='primary-btn max-md:text-base max-md:w-full max-md:justify-center'>
-                <FolderGit2 /> GitHub Projects 
+                <FolderGit2 /> GitHub Projects
               </Link>
               <ScrollButton scrollId="contact-section" className='secondary-btn max-md:text-base max-md:w-full max-md:justify-center'>
-                <Send/> Work with me
+                <Send /> Work with me
               </ScrollButton>
             </div>
+            <Dialog>
+              <DialogTrigger className='primary-light-btn max-md:text-base mt-4 justify-center'>
+                <Paperclip /> Curriculum Vitae
+              </DialogTrigger>
+              <DialogContent className='min-w-[75vw] h-full'>
+                <iframe src="https://drive.google.com/file/d/1G9sUsKzrer5qM8oPxw9MbpdM3pACCBdZ/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
+              </DialogContent>
+            </Dialog>
+          </div>
+
+          <div className="absolute top-[80vh] h-[10vh] w-full flex items-center justify-center gap-8">
+            <Link href="https://www.linkedin.com/in/florin-veni%C8%99-5169b3332/" target="_blank">
+              <Image src='/img/social/linkedin.png' alt="python icon" width={100} height={100} className='hover:scale-105 ease' />
+            </Link>
+            <Link href="https://github.com/floron1337" target="_blank">
+              <Image src='/img/social/github.png' alt="python icon" width={100} height={100} className='hover:scale-105 ease' />
+            </Link>
           </div>
         </div>
         <div className="w-full h-[90vh] max-md:h-screen bg-[url('/img/home-bg.jpg')] bg-cover"></div>
       </section>
 
-      <section className="w-full bg-[url('/img/about-bg.png')] bg-cover pb-16 flex flex-col items-center border-t-8" id='about-section'>
-        <div className='flex flex-row items-center justify-center gap-4 mx-32 text-white mt-4 max-md:mx-4 translate-x-8 max-md:translate-x-0'>
-          <div className='w-12 h-12 bg-white'></div>
-          <h1 className='text-3xl font-semibold max-md:text-xl'>Work & Study Experience</h1>
-        </div>
-        <div className='flex flex-row mt-4 text-white justify-center translate-x-8 max-md:translate-x-0 max-md:gap-12'>
-            <h1 className='text-sm -rotate-90 translate-x-12 max-md:hidden'>Florin Veniș</h1>
-            <Image src="/img/avatar.png" alt="Picture of Florin Venis" width={160} height={160} className='-translate-x-6 max-md:translate-x-8'/>
-            <div className='flex flex-col justify-center'>
-              <h2>Living in Romania</h2>
-              <h2>Born in 2004</h2>
-              <h2>Over 6 years of experience</h2>
-            </div>
-        </div>
-
-        <div className='h-[0.1px] bg-white w-1/2 mt-8 translate-x-8 max-md:translate-x-0'>
-        </div>
-
-        <div className='flex flex-col mx-32 items-center max-md:mx-4 translate-x-8 max-md:translate-x-0'>
-        <div className='flex flex-col text-white'>
-
-          <div className='flex flex-col'>
-            <div className='flex flex-row gap-4 items-center mt-8'>
-              <BriefcaseBusiness className='size-10'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Work Experience</h1>
-            </div>
-            <h1 className='text-xl mt-4 font-medium'>Lead Trainer at Logiscool Medgidia</h1>
-            <h3 className='text-xs'>January 2022 - July 2024</h3>
-            <p className='mt-2'>
-              IT Instructor, teaching children aged 9-18. Helped with internal organization and local community events.
-            </p>
-          </div>
-
-          <div className='flex flex-col'>
-            <div className='flex flex-row gap-4 items-center mt-8'>
-              <Layers className='size-10'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Tech Stack</h1>
-            </div>
-            <div className='flex flex-row gap-8 mt-4 flex-wrap'>
-              <Image src='/img/stack/git.svg' alt="git icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/css3.svg' alt="css3 icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/html5.svg' alt="html5 icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/javascript.svg' alt="javascript icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/nextdotjs.svg' alt="nextjs icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/tailwindcss.svg' alt="tailwind icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/react.svg' alt="react icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/django.svg' alt="django icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-              <Image src='/img/stack/python.svg' alt="python icon" width={60} height={60} className='invert hover:scale-125 ease'/>
-            </div>
-          </div>
-
-          <div className='flex flex-col'>
-            <div className='flex flex-row gap-4 items-center mt-8'>
-              <GraduationCap className='size-12'/> <h1 className='text-4xl font-semibold text-aqua max-md:text-2xl'>Studies & Distinctions</h1>
-            </div>
-            <h1 className='text-xl mt-4 font-medium'>Bachelor&apos;s in Informatics - University of Bucharest</h1>
-            <h3 className='text-xs'>October 2024 - Ongoing</h3>
-
-            <h1 className='text-xl mt-4 font-medium'>Math & Computer Science - &quot;Nicolae Balcescu&quot; High School Medgidia</h1>
-            <h3 className='text-xs'>September 2020 - June 2024</h3>
-
-            <h1 className='text-xl mt-4 font-medium'>GENIUS Olympiad NY, USA - Bronze Medal</h1>
-            <h3 className='text-xs'>June 2024</h3>
-
-            <h1 className='text-xl mt-4 font-medium'>National Olympiad of Applied Informatics - Polytechnic University of Bucharest</h1>
-            <h3 className='text-xs'>May 2024</h3>
-          </div>
-
-          <div className='mt-16 flex flex-col items-center'>
-            <h1 className='text-4xl font-medium max-md:text-xl'>Made up your mind?</h1>
-            <h2 className='max-md:text-sm text-center'>Schedule a private meeting for free!</h2>
-
-            <div className='flex flex-row gap-4 mt-4'>
-              <Dialog>
-                <DialogTrigger className='primary-light-btn max-md:text-xs'>
-                  <Paperclip/> Curriculum Vitae
-                </DialogTrigger>
-                <DialogContent className='min-w-[75vw] h-full'>        
-                  <iframe src="https://drive.google.com/file/d/1wO1rjBrvOJItRh75vD8CYFcYBwLeYUkU/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
-                </DialogContent>
-              </Dialog>
-              <ScrollButton scrollId='contact-section' className='secondary-btn max-md:text-xs'>
-                <Send/> Work with me
-              </ScrollButton>
-            </div>
-          </div> 
-          </div>
-        </div>   
-      </section>
-
       <section className='w-full' id='projects-section'>
-        <div className='flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-8 border-t-8'>
-          <CodeXml className="size-24"/>
+        <div className='h-[10vh] border-t border-b flex flex-row items-center justify-center gap-4 bg-dark-blue text-white py-8'>
+          <CodeXml className="size-24 max-lg:size-12" />
           <div>
-            <h1 className='text-4xl font-bold'>Take a look at some of my projects</h1>
+            <h1 className='text-4xl font-bold max-lg:text-2xl max-md:text-xl'>Take a look at some of my projects</h1>
             <h2>Built with love, over the years</h2>
           </div>
         </div>
 
-        <div className="min-h-[75vh] bg-[url('/img/projects/novaks.jpg')] bg-cover flex items-center ">
-          <div className='ml-48 text-[#01446F] bg-white p-8 w-1/2 max-md:w-2/3 rounded-2xl border-4 max-md:ml-4'>
-            <h2 className='font-medium'>E-Commerce</h2>
-            <h1 className='text-5xl font-bold'>Novak&apos;s Seaside Diner</h1>
-            <h3 className='text-xs'>July 2024</h3>
-            <p className='mt-4'>
-              A beautiful custom made e-commerce website, equipped with secure payment services and management systems.
-            </p>
-            <div className="flex mt-4">
-              <Link href="https://novaks-diner.vercel.app/" target="_blank" className='bg-[#01446F] text-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl hover:gap-4 ease items-center justify-center'>
-                <SquareArrowOutUpLeft/>
-                Check it out
-              </Link>
+        <div className="min-h-[75vh] bg-center bg-[url('/img/projects/vichess2.jpg')] bg-cover flex justify-center items-center border-black">
+          <div className='vichess-bg-gradient max-lg:ml-[5vw] max-md:m-8 text-white p-8 rounded-2xl border'>
+            <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base max-lg:[&>p]:text-xs">
+              <p>Machine Learning</p>
+              <p>Image Recognition</p>
+              <p>NEXTjs</p>
+              <p>FastAPI</p>
+              <p>Ultralytics YOLOv8</p>
+              <p>OpenCV</p>
             </div>
-          </div>
-        </div>
 
-        <div className="min-h-[75vh] bg-[url('/img/projects/vichess.JPG')] bg-cover flex items-center ">
-          <div className='ml-48 text-white vichess-bg-gradient p-8 w-1/2 rounded-2xl border-4 border-black max-md:w-2/3 max-md:ml-4'>
-            <h2 className='font-medium'>Web Application</h2>
-            <h1 className='text-5xl font-bold'>VIChess</h1>
+            <h2 className='text-base'>Web Application</h2>
+
+            <h1 className='text-5xl font-bold max-lg:text-4xl'>VIChess</h1>
             <h3 className='text-xs'>May 2023 - July 2023</h3>
             <p className='mt-4'>
-              The power of A.I. move prediction and image recognition unleashed in the noble game of Chess. 
+              The power of A.I. move prediction and image recognition unleashed in the noble game of Chess.
             </p>
-            <div className="flex mt-4">
-              <Link href="https://vichess.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white hover:gap-4 flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
-                <SquareArrowOutUpLeft/>
-                Check it out
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-[75vh] bg-[url('/img/projects/algovs.PNG')] bg-cover flex items-center ">
-          <div className='ml-48 text-white p-8 w-1/2 rounded-2xl max-md:w-2/3 max-md:ml-4'>
-            <h2 className='font-medium'>Web Application</h2>
-            <h1 className='text-5xl font-bold'>AlgoVS</h1>
-            <h3 className='text-xs'>March 2024 - present</h3>
-            <p className='mt-4'>
-              A 3D Web Application where you can build stunning animations and algorithm visualizations.
-            </p>
-            <div className="flex mt-4">
-              <Link href="https://algo-vs.vercel.app/" target="_blank" className='bg-white text-black flex flex-row gap-2 py-[8px] px-[24px] rounded-xl hover:gap-4 ease items-center justify-center'>
+            <div className="flex mt-4 gap-4 max-md:text-sm">
+              <Link href="https://vichess.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
                 <SquareArrowOutUpLeft />
                 Check it out
               </Link>
+              <Link href="https://github.com/floron1337/VIChess" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                <FolderGit2 />
+                Project GitHub
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full bg-[url('/img/projects-bg.png')] bg-cover border-t flex flex-col items-center">
+          <div className="ml-[5vw] px-8 max-xl:ml-0 max-xl:px-0  flex items-center py-8 gap-32 max-xl:flex-col max-xl:gap-8">
+            <div className="w-1/2 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] max-md:px-8 max-md:ml-0">
+              <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
+                <p>Assembly x86</p>
+                <p>C</p>
+                <p>Computer Architecture</p>
+                <p>Memory</p>
+              </div>
+
+              <h2 className='text-base'>Program</h2>
+              <h1 className="text-3xl font-semibold">Memory Management System in Assembly x86</h1>
+              <h3 className='text-xs'>December 2024</h3>
+              <p className='mt-4'>
+                The raw power of Assembly used for a system to allocate and de-allocate memory for files, plus complexe functions like defragmentation and concrete.
+              </p>
+              <div className="flex mt-4 gap-4">
+                <Link href="https://github.com/floron1337/memory-asc" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 />
+                  Project GitHub
+                </Link>
+              </div>
+              <Image className="mt-8 border" src="/img/projects/memory.jpg" alt="screenshot of allocated space for files" width={1910} height={1036} />
+            </div>
+            <div className="w-1/2 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] max-md:ml-0 max-md:px-8">
+              <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
+                <p>Python</p>
+                <p>Keras</p>
+                <p>SKlearn</p>
+                <p>KMeans</p>
+                <p>ResNet</p>
+                <p>Cosine Similarity</p>
+              </div>
+
+              <h2 className='text-base'>Program</h2>
+              <h1 className="text-3xl font-semibold">Website Logo Matching and Grouping</h1>
+              <h3 className='text-xs'>March 2025</h3>
+              <p className='mt-4'>
+                Built during a challenge to scrape all the logos from a list of domains and group them based on similarity.
+              </p>
+              <div className="flex mt-4 gap-4">
+                <Link href="https://github.com/floron1337/logo-cluster" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 />
+                  Project GitHub
+                </Link>
+              </div>
+              <Image className="mt-8 border" src="/img/projects/grouping.png" alt="screenshot of allocated space for files" width={1920} height={9999} />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-[url('/img/projects-bg2.png')] border-b min-h-[70vh] bg-cover border-t flex flex-col items-center">
+          <div className="ml-[5vw] max-md:ml-0 px-8 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] border-b py-8 flex gap-16 max-xl:gap-8 items-center max-xl:flex-col">
+            <div className="w-1/2 max-xl:w-full">
+              <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
+                <p>C++</p>
+                <p>SFML</p>
+                <p>CMake</p>
+                <p>Object-Oriented Programming</p>
+              </div>
+
+              <h2 className='text-base'>Game</h2>
+
+              <h1 className='text-5xl font-bold max-md:text-4xl'>Worldshaper&apos;s Gambit</h1>
+              <h3 className='text-xs'>March 2025 - Current</h3>
+              <p className='mt-4'>
+                A dark, politics-focused game where you take control through force of the Planet and must mantain control at all cost, making tough decisions through cards.
+                <br /><br />
+                A very early demo is available on GitHub.
+              </p>
+              <div className="flex mt-4 gap-4">
+                <Link href="https://github.com/floron1337/worldshapers-gambit" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 />
+                  Project GitHub
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 max-xl:w-full">
+              <Image src="/img/projects/worldshapers.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
+            </div>
+          </div>
+          <div className="ml-[5vw] max-md:ml-0 px-8 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] border-b py-8 flex gap-16 max-xl:gap-8 items-center justify-center max-xl:flex-col">
+            <div className="w-1/2 max-xl:w-full">
+              <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
+                <p>Frontend</p>
+                <p>Shopify</p>
+                <p>NEXTjs</p>
+              </div>
+
+              <h2 className='text-base'>E-Commerce</h2>
+
+              <h1 className='text-5xl font-bold max-md:text-4xl'>Novak&apos;s Seaside Diner</h1>
+              <h3 className='text-xs'>July 2024</h3>
+              <p className='mt-4'>
+                A beautiful custom made e-commerce website, equipped with secure payment services and management systems.
+              </p>
+              <div className="flex mt-4 gap-4">
+                <Link href="https://novaks-diner.vercel.app/" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <SquareArrowOutUpLeft />
+                  Check it out
+                </Link>
+                <Link href="https://github.com/floron1337/novaks-diner" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 />
+                  Project GitHub
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 max-xl:w-full">
+              <Image src="/img/projects/novaks.jpg" alt="photo of the project Novaks Diner" width={1280} height={640} />
+            </div>
+          </div>
+
+          <div className="ml-[5vw] max-md:ml-0 px-8 max-xl:w-auto max-xl:px-8 max-xl:ml-[10vw] py-8 flex gap-16 max-xl:gap-8 items-center max-xl:flex-col">
+            <div className="w-1/2 max-xl:w-full">
+              <div className="flex flex-wrap gap-2 items-center mb-4 [&>p]:bg-white [&>p]:px-2 [&>p]:text-black [&>p]:rounded [&>p]:text-base">
+                <p>Rust</p>
+                <p>APIs</p>
+              </div>
+
+              <h2 className='text-base'>Terminal App</h2>
+
+              <h1 className='text-5xl font-bold max-md:text-4xl'>Rusty Weather</h1>
+              <h3 className='text-xs'>February 2025</h3>
+              <p className='mt-4'>
+                A weather app build using Rust and Open Weather API. Built during a hackathon.
+              </p>
+              <div className="flex mt-4 gap-4">
+                <Link href="https://github.com/floron1337/rusty-weather" target="_blank" className='border text-white hover:text-black hover:bg-white flex flex-row gap-2 py-[8px] px-[24px] rounded-xl ease items-center justify-center'>
+                  <FolderGit2 />
+                  Project GitHub
+                </Link>
+              </div>
+            </div>
+            <div className="w-1/2 max-xl:w-full">
+              <Image src="/img/projects/weather.png" alt="photo of the project Novaks Diner" width={1280} height={640} />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-[url('/img/contact-bg.jpg')] bg-cover border-t-8 pb-16" id='contact-section'>
+      <section className="w-full bg-[url('/img/contact-bg.jpg')] bg-cover pb-16" id='contact-section'>
         <div className='mx-32 mt-8 flex flex-col items-center translate-x-8 max-md:mx-4 max-md:translate-x-0'>
           <div className='flex flex-row items-center justify-center gap-4 text-white mt-4'>
             <div className='w-12 h-12 bg-white'></div>
@@ -198,11 +246,11 @@ export default function Home() {
             </div>
           </div>
 
-          <ContactForm/>
+          <ContactForm />
 
         </div>
       </section>
-      <Toaster/>
-    </main>
+      <Toaster />
+    </main >
   );
 }
