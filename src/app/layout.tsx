@@ -3,7 +3,9 @@ import { Montserrat, Lusitana } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import Loading from "@/components/Loading";
 import { Toaster } from "@/components/ui/toaster";
+import { Suspense } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin", "latin-ext"] })
 
@@ -21,7 +23,9 @@ export default function RootLayout({
     <html lang="en" className='scroll-smooth'>
       <body className={montserrat.className}>
         <Sidebar />
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
         <Footer />
       </body>
     </html>
