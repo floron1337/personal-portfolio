@@ -40,7 +40,7 @@ export default function Home() {
                 <Paperclip /> Curriculum Vitae
               </DialogTrigger>
               <DialogContent className='min-w-[75vw] h-full'>
-                <iframe src="https://drive.google.com/file/d/1G9sUsKzrer5qM8oPxw9MbpdM3pACCBdZ/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
+                <iframe src="https://drive.google.com/file/d/1MNwR23cQlnju9XTwEF0989Wjlc7cfuHN/preview" width="100%" height="95%" allow="autoplay" className='mt-4'></iframe>
               </DialogContent>
             </Dialog>
           </div>
